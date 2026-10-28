@@ -2,8 +2,21 @@
 name = "tar4rg"
 version = "0.1.0"
 edition = "2024"
+description = """\
+Converts files/folders to a single PNG image. \
+Data is first packed into a tar archive, then encoded into RGB channels.\
+"""
+repository = "https://github.com/66-9v05/tar4rg"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
 tar = "0.4"
 lodepng = "3.8"
 crc32c = "0.6"
+
+[profile.release]
+opt-level = "z"
+panic = "abort"
+lto = true
+codegen-units = 1
+strip = true
