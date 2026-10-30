@@ -104,6 +104,8 @@ That means some files/folders may have already been created and written **after 
   - Initial release
   - Configured `Cargo.toml`
   - Added `README.md` and `LICENSE` files
+- **Unreleased**:
+  - Fixed an issue where the encoder could not accept absolute paths
 
 ## License
 
@@ -114,3 +116,7 @@ This project uses both the MIT and Apache-2.0 licenses.
 - [tar](https://crates.io/crates/tar) (MIT OR Apache-2.0)
 - [crc32c](https://crates.io/crates/crc32c) (MIT OR Apache-2.0)
 - [lodepng](https://crates.io/crates/lodepng) (Zlib)
+
+---
+
+*I would give my thanks to DeepSeek for its guidance. It provided suggestions for my coding questions and proofread this README. However, it did not create or write any file directly; the entire project was completely written by myself.*

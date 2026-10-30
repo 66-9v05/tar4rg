@@ -15,7 +15,7 @@ fn file_pack <P: AsRef<path::Path>> (p: &P) -> std::io::Result<Vec<u8>> {
     if path.is_dir() {
         builder.append_dir_all(path.canonicalize()?.file_name().unwrap(), path)?;
     } else {
-        builder.append_path(path)?;
+        builder.append_path_with_name(path, path.file_name().unwrap())?;
     }
     Ok(builder.into_inner()?)
 }
